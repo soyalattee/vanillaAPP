@@ -21,6 +21,15 @@ HTML5 스펙
 
 #### localStorage.removeItem(key)
 
+### PointerEvent
+
+click 이벤트를 달아 전달된 event를 조회하면  
+PointerEvent가 잡힌다.  
+mouseEvent 인터페이스를 상속받는 이벤트.  
+chrome, edge에서는 지원하나 safari에서는 지원에 제한이있음.
+
+https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent
+
 ### 더 공부하면 좋을점
 
 브라우저가 데이터를 저장하는 다양한 방식에 대해
@@ -30,6 +39,7 @@ local storage 말고 또 뭐가 있으며 각자 어떻게 활용되나?
 키/값 형태로 데이터를 저장하고 키를 기반으로 데이터르 조회한다.  
 영구 저장소인 localStorage와 임시 저장소인 SessionStorage로 지속성에 따라 다르게 저장한다.
 
+Application > storage탭에서 site data clear를 통해 날릴 수 있음
 \*\*\* 당연한 얘기지만 데이터의 저장은 도메인 단위로 제한
 
 #### LocalStorage (영구저장소)
@@ -37,6 +47,7 @@ local storage 말고 또 뭐가 있으며 각자 어떻게 활용되나?
 저장한 데이터를 명시적으로 지우지 않는 이상 영구 보관.
 도메인마다 별도 로컬 스토리지 생성.
 도메인만 같으면 전역적으로 공유된다.
+서버에 전달하는게 아닌 브라우저가 들고있는 데이터!
 
 #### SessionStorage(임시 저장소)
 
@@ -54,3 +65,4 @@ local storage 말고 또 뭐가 있으며 각자 어떻게 활용되나?
 최대 쿠키 20개, size는 4kb로 제한
 만료일자를 지정할 수 있다.
 민료일자를 지정하지 않으면 세션 쿠키가 된다. (임시 데이터)
+서버와 계속 상호작용 하는데이터는 쿠키에 사용해! 로그인&유저정보&세션 등을 가지고있음
