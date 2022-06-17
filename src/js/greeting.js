@@ -2,7 +2,7 @@ const loginForm = document.getElementById("login-form");
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 const greeting = document.querySelector("#greeting");
-
+const button = document.querySelector("#button");
 // string만 포함된 변수는 대문자로 표기!
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -29,5 +29,11 @@ if (savedUsername === null) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `hello  ${username}`;
+  greeting.innerText = `hello ${username}`;
 }
+
+function consoleDir(event) {
+  event.preventDefault();
+  console.dir(event);
+}
+button.addEventListener("click", consoleDir);
