@@ -66,3 +66,13 @@ Application > storage탭에서 site data clear를 통해 날릴 수 있음
 만료일자를 지정할 수 있다.
 민료일자를 지정하지 않으면 세션 쿠키가 된다. (임시 데이터)
 서버와 계속 상호작용 하는데이터는 쿠키에 사용해! 로그인&유저정보&세션 등을 가지고있음
+
+## document
+
+### createElement
+
+### appendChild
+
+## JSON.stringify
+
+JavaScript 값이나 객체를 JSON 문자열로 변환
